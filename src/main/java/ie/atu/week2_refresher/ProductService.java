@@ -9,6 +9,7 @@ public class ProductService {
     private List<Product> productList = new ArrayList<>();
 
     public List<Product> getAllProducts(){
+
         return productList;
     }
 
