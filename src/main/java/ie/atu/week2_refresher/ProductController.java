@@ -10,7 +10,12 @@ import java.util.List;
 @RequestMapping("/products")
 
 public class ProductController {
+    private final ProductService productService;
     public List<Product> productList = new ArrayList<Product>();
+    @Autowired
+    public ProductController(ProductService productService){
+        this.productService = productService;
+    }
     @GetMapping
     public List<Product> getAllProducts()
     {
