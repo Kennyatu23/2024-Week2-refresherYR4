@@ -1,6 +1,8 @@
 package ie.atu.week2_refresher;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,4 +19,11 @@ public class ProductService {
         productList.add(product);
         return product;
     }
+    public Product  updateProduct(@PathVariable Long id, @RequestBody Product product )
+    {
+        for(Product previousProduct : productList);
+            if()
+
+    }
+
 }
