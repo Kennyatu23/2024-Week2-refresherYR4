@@ -24,7 +24,7 @@ public class ProductService {
         // loop for running through a product list
         for(Product previousProduct : productList) {
         //Search for product with a matching id
-            if (previousProduct.getId() == id) {
+            if (previousProduct.getId().equals(id)) {
                 //Update name and price field
                 previousProduct.setName(product.getName());
                 previousProduct.setPrice(product.getPrice());
