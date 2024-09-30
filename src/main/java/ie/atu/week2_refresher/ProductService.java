@@ -22,7 +22,13 @@ public class ProductService {
     public Product  updateProduct(@PathVariable Long id, @RequestBody Product product )
     {
         for(Product previousProduct : productList);
-            if()
+            if (previousProduct.getID().equals(id){
+                previousProduct setName(productList.getName());
+                previousProduct setPrice(productList.getPrice());
+
+                return previousProduct;
+
+    }
 
     }
 
