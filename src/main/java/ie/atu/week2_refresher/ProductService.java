@@ -36,4 +36,10 @@ public class ProductService {
         }
         return product;
     }
+    public List<Product> deleteProduct(@PathVariable Long id) {
+        productList.removeIf(product ->product.getId().equals(id));
+        return productList;
+
+
+    }
 }
