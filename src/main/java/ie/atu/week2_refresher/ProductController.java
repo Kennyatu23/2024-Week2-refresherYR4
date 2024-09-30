@@ -19,20 +19,19 @@ public class ProductController {
     @GetMapping
     public List<Product> getAllProducts()
     {
-        return productList;
+        return productService.getAllProducts();
     }
     @PostMapping
     public Product addProduct(@RequestBody @Valid Product product)
     {
-        productList.add(product);
-        return product;
+       return productService.addProduct(product);
     }
-    /*
+
     @PutMapping("/{id}")
     public Product  updateProduct(@PathVariable Long id, @RequestBody Product product )
     {
-         return productService()
+         return productService.updateProduct(id, product);
 
-    }*/
+    }
 
 }
