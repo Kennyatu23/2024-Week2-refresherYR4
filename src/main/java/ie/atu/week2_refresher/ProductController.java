@@ -12,9 +12,9 @@ import java.util.List;
 public class ProductController {
     private final ProductService productService;
     public List<Product> productList = new ArrayList<Product>();
-    @Autowired
+    @Autowired //Constructor injection
     public ProductController(ProductService productService){
-        this.productService = productService;
+        this.productService = productService;  // Loose coupling
     }
     @GetMapping
     public List<Product> getAllProducts()
@@ -24,7 +24,8 @@ public class ProductController {
     @PostMapping
     public Product addProduct(@RequestBody @Valid Product product)
     {
-       return productService.addProduct(product);
+
+        return productService.addProduct(product);
     }
 
     @PutMapping("/{id}")
@@ -36,6 +37,7 @@ public class ProductController {
 
     @DeleteMapping("/{id}")
     public List<Product> deleteProduct(@PathVariable Long id) {
+
         return productService.deleteProduct(id);
     }
 }
