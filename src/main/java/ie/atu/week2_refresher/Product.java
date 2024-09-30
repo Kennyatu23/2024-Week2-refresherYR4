@@ -13,11 +13,11 @@ import lombok.NonNull;
 @NoArgsConstructor
 public class Product {
 
-    @Min(value = 1, message = " Id most be greater than 0")
+    @Min(value = 1, message = " Id must be greater than 0")
     private Long id;
-    @NotBlank(message = "Product cannot be blank")
+    @NotBlank(message = " Product cannot be blank")
     private String name;
-    @Positive(message ="Price must be greater then 0" )
+    @Positive(message =" Price must be greater then 0" )
     private double price;
 
 
