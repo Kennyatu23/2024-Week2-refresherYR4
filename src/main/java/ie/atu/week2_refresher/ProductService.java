@@ -21,8 +21,11 @@ public class ProductService {
     }
     public Product  updateProduct(@PathVariable Long id, @RequestBody Product product )
     {
+        //loop for running through a product list
         for(Product previousProduct : productList);
+        //Search for product with a matching id
             if (previousProduct.getID().equals(id){
+                //Update name and price field
                 previousProduct setName(productList.getName());
                 previousProduct setPrice(productList.getPrice());
 
