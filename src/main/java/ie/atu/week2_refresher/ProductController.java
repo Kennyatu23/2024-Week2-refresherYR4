@@ -27,11 +27,12 @@ public class ProductController {
         productList.add(product);
         return product;
     }
+    /*
     @PutMapping("/{id}")
     public Product  updateProduct(@PathVariable Long id, @RequestBody Product product )
     {
          return productService()
 
-    }
+    }*/
 
 }
