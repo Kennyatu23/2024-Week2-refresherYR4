@@ -10,11 +10,13 @@ import java.util.List;
 @RequestMapping("/products")
 
 public class ProductController {
+    private PaymentService paymentService;
     private final ProductService productService;
     public List<Product> productList = new ArrayList<Product>();
     @Autowired //Constructor injection
-    public ProductController(ProductService productService){
-        this.productService = productService;  // Loose coupling
+    public ProductController(ProductService productService, PaymentService paymentservice){
+        this.productService = productService;// Loose coupling
+        this.paymentService = paymentservice;
     }
     @GetMapping
     public List<Product> getAllProducts()
@@ -25,6 +27,12 @@ public class ProductController {
     public Product addProduct(@RequestBody @Valid Product product)
     {
         return productService.addProduct(product);
+    }
+    @PostMapping("/Payment_Confirmation")
+    public String paymentConfirmation(@RequestBody Product product)
+    {
+        String confirm = paymentService.paymentDetails(product);
+        return confirm;
     }
 
     @PutMapping("/{id}")
