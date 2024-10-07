@@ -5,7 +5,7 @@ WORKDIR /app
 # Copy the Jar file from the target directory to the container at /app
 COPY target/week2_refresher-0.0.1-SNAPSHOT.jar /app
 
-# Make port 8080 availible to the world outside this container
+# Make port 8080 available to the world outside this container
 EXPOSE 8080
 
 # Command to run the application
